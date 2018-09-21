@@ -32,12 +32,12 @@ E você pode conferir aqui: http://localhost:7700/
 
 Faça o clone do projeto
 ```shell
-git clone [...]
+git clone https://github.com/M4rkux/pesquisa-vivo.git
 ```
 
 ou se você usa ssh ([see how to configure ssh](https://help.github.com/articles/connecting-to-github-with-ssh/)):
 ```shell
-git clone [...]
+git clone git@github.com:M4rkux/pesquisa-vivo.git
 ```
 
 Vá para a pasta:
