@@ -1,12 +1,12 @@
 const assert = require('assert');
 import fetch from 'isomorphic-fetch';
-import { AccountService } from '../src/app/account.service';
+import { SurveyService } from '../src/app/survey.service';
 
-describe('AccountService', function() {
+describe('SurveyService', function() {
   describe('Create', function() {
-    it('should create an account and return OK', function(done) {
-        let account = {};
-        AccountService.create(account).then(result => { 
+    it('should create an survey and return OK', function(done) {
+        let survey = {};
+        SurveyService.create(survey).then(result => { 
             assert.equal(result.ok, true);
             done();
         });

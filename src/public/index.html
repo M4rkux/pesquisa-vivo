@@ -1,54 +1,48 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Olist Frontend test</title>
+    <title>Pesquisa VIVO Empresas: Serviços Digitais</title>
 </head>
 
 <section>
     <header>
-        <img class="logo" src="/imgs/brand.svg" />
+        <img class="logo" src="/imgs/vivo.png" />
     </header>
     
     <form>
-        <h4 class="subtitle">Crie sua conta</h4>
+        <h4 class="subtitle"> Caro cliente, queremos avaliar sua satisfação com seu GERENTE DE NEGÓCIOS.</h4>
         <div class="row">
-            <label for="name">Nome completo</label>
-            <input required type="text" id="name" name="name" />
+            <label>Avalie de 1 a 10 o atendimento prestado. <span class="required">*</span></label>
+            <div class="notas">
+                <label class="mr-15"><input required type="radio" name="atendimento" value="1" />1</label>
+                <label class="mr-15"><input required type="radio" name="atendimento" value="2" />2</label>
+                <label class="mr-15"><input required type="radio" name="atendimento" value="3" />3</label>
+                <label class="mr-15"><input required type="radio" name="atendimento" value="4" />4</label>
+                <label class="mr-15"><input required type="radio" name="atendimento" value="5" />5</label>
+                <label class="mr-15"><input required type="radio" name="atendimento" value="6" />6</label>
+                <label class="mr-15"><input required type="radio" name="atendimento" value="7" />7</label>
+                <label class="mr-15"><input required type="radio" name="atendimento" value="8" />8</label>
+                <label class="mr-15"><input required type="radio" name="atendimento" value="9" />9</label>
+                <label class="mr-15"><input required type="radio" name="atendimento" value="10" />10</label>
+            </div>
         </div>
 
         <div class="row">
-            <label for="email">E-mail</label>
-            <input required type="email" id="email" name="email" />
+            <label for="email">2. Você teve contato com seu gerente de negócios nos últimos 3 meses? <span class="required">*</span></label>
+            <div>
+                <label class="mr-15"><input required type="radio" name="teve_contato" value="S" />Sim</label>
+                <label class="mr-15"><input required type="radio" name="teve_contato" value="N" />Não</label>
+            </div>
         </div>
 
         <div class="row">
-            <label for="password">Senha</label>
-            <input required type="password" id="password" name="password" pattern="(?=.*[0-9])(?=.*[A-Z]).{6,}" />
-            <span class="password-strength"></span>
-            <span class="password-strength"></span>
-            <span class="password-strength"></span>
-
-            <ul class="list-password">
-                <li>
-                    <span class="req-1"></span>Pelo menos 6 caracteres
-                </li>
-                <li>
-                    <span class="req-2"></span>Pelo menos 1 letra maiúscula
-                </li>
-                <li>
-                    <span class="req-3"></span>Pelo menos 1 número
-                </li>
-            </ul>
-        </div>
-
-        <div class="row">
-            <label for="password_confirm">Confirme sua senha</label>
-            <input required type="password" id="password_confirm" name="password_confirm" />
+            <label for="comentario">3. Deixe aqui seu comentário sobre seu gerente de negócios</label>
+            <input type="text" id="comentario" name="comentario" />
         </div>
 
         <div class="row">
             <button type="submit" class="btn-submit" disabled>
-                <span class="lbl-criar-conta">Criar conta</span>
+                <span class="lbl-criar-conta">Enviar formulário</span>
                 <span class="ellipse e1"></span>
                 <span class="ellipse e2"></span>
                 <span class="ellipse e3"></span>

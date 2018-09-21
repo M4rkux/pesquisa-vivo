@@ -15,8 +15,8 @@ body {
     font-family: 'SF Pro Text', 'Roboto', sans-serif;
     background-color: $bg-color;
     color: $label-color;
-    padding-top: 80px;
-    padding-bottom: 90px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
     header {
         text-align: center;
@@ -24,6 +24,7 @@ body {
     .logo {
         text-align: center;
         color: $logo-color;
+        max-width: 100%;
     }
 
     .subtitle {
@@ -41,7 +42,7 @@ body {
 
     section {
         width: 100%;
-        max-width: 515px;
+        max-width: 80%;
         padding: 60px 70px 48px 70px;
         margin: auto;
 
@@ -57,7 +58,7 @@ body {
         margin-bottom: 8px;
     }
 
-    input {
+    input[type=text], input[type=email] {
         background: #FFFFFF;
         border: 1px solid #B6B9D0;
         box-sizing: border-box;
@@ -125,7 +126,7 @@ body {
             background-color: $button-success-color-hover;
             cursor: pointer;
         }
-        &:active {
+        &:active:not([disabled]) {
             background-color: $button-success-color-active;
         }
     }
@@ -184,7 +185,7 @@ body {
     /* Confirmation Screen */
     .confirmation {
         text-align: center;
-        margin: 92px 60px;
+        margin: 30px 30px;
     
         .subtitle {
             margin-bottom: 21px;
@@ -204,6 +205,31 @@ body {
             font-size: 16px;
             color: $text-color;
         }
+    }
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.required {
+    color: red;
+}
+
+.mr-15 {
+    margin-right: 15px;
+}
+
+.notas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 540px) {
+    body section {
+        max-width: 100%;
+        padding: 15px;
     }
 }
 

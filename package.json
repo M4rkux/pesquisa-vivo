@@ -1,7 +1,7 @@
 {
-  "name": "olist-frontend",
+  "name": "vivo-survey",
   "version": "1.0.0",
-  "description": "Olist frontend test by Marcus",
+  "description": "Pesquisa VIVO Empresas: Serviços Digitais",
   "main": "index.js",
   "author": "Marcus Amaral Rolim",
   "license": "MIT",
