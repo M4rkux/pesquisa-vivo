@@ -1,5 +1,5 @@
-// const URL_API = 'https://formcarry.com/s/6N2Chqopqjz/'
-const URL_API = 'http://localhost:8080'
+const URL_API = 'https://formcarry.com/s/6N2Chqopqjz/'
+// const URL_API = 'http://localhost:8080'
 export class SurveyService {
   static create (survey) {
     return window.fetch(URL_API, {
