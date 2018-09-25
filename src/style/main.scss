@@ -15,8 +15,8 @@ body {
     font-family: 'SF Pro Text', 'Roboto', sans-serif;
     background-color: $bg-color;
     color: $label-color;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 5px;
 
     header {
         text-align: center;
@@ -226,10 +226,60 @@ ul {
     flex-wrap: wrap;
 }
 
+.contact-title {
+    font-weight: 500;
+    color: #312F4F;
+    font-size: large;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    small {
+        width: 100%;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #312F4F;
+    }
+}
+
+.half-col {
+    width: calc(50% - 5px);
+    &:nth-child(2n) {
+        margin-right: 5px;
+    }
+    &:nth-child(2n+1) {
+        margin-left: 5px;
+    }
+}
+
+article {
+    margin-top: 40px;
+    .row {
+        margin-top: 12px;
+    }
+}
+
 @media screen and (max-width: 540px) {
-    body section {
-        max-width: 100%;
-        padding: 15px;
+    body {
+        padding-top: initial;
+        section {
+            max-width: 100%;
+            padding: 15px;
+        }
+    }
+    .half-col {
+        width: 100%;
+        &:nth-child(2n) {
+            margin-right: initial;
+        }
+        &:nth-child(2n+1) {
+            margin-left: initial;
+            margin-top: 10px;
+        }
     }
 }
 
