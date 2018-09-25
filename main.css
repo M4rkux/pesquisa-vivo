@@ -2,8 +2,8 @@ body {
   font-family: 'SF Pro Text', 'Roboto', sans-serif;
   background-color: #E5E5E5;
   color: #696D8C;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 5px;
   /* Confirmation Screen */ }
   body header {
     text-align: center; }
@@ -149,10 +149,47 @@ ul {
   display: flex;
   flex-wrap: wrap; }
 
+.contact-title {
+  font-weight: 500;
+  color: #312F4F;
+  font-size: large;
+  margin-bottom: 0px;
+  margin-top: 0px; }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap; }
+  .flex small {
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #312F4F; }
+
+.half-col {
+  width: calc(50% - 5px); }
+  .half-col:nth-child(2n) {
+    margin-right: 5px; }
+  .half-col:nth-child(2n+1) {
+    margin-left: 5px; }
+
+article {
+  margin-top: 40px; }
+  article .row {
+    margin-top: 12px; }
+
 @media screen and (max-width: 540px) {
-  body section {
-    max-width: 100%;
-    padding: 15px; } }
+  body {
+    padding-top: initial; }
+    body section {
+      max-width: 100%;
+      padding: 15px; }
+  .half-col {
+    width: 100%; }
+    .half-col:nth-child(2n) {
+      margin-right: initial; }
+    .half-col:nth-child(2n+1) {
+      margin-left: initial;
+      margin-top: 10px; } }
 
 @keyframes animate {
   0% {
