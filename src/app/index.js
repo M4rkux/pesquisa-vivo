@@ -24,6 +24,9 @@ allInputs.forEach(elem => {
     btnSubmit.disabled = !canSubmit()
   })
   elem.addEventListener('keyup', function () {
+    if (this.getAttribute('mask')) {
+      this.value = createMask(this.value, this.getAttribute('mask'))
+    }
     checkInput(this, true)
     btnSubmit.disabled = !canSubmit()
   })
@@ -78,12 +81,6 @@ function toggleSuccessError (elem, isSuccess) {
   elem.classList.toggle('success', isSuccess)
   elem.classList.toggle('error', !isSuccess)
 }
-
-inputMasks.forEach(input => {
-  input.addEventListener("keyup", function(){
-    this.value = createMask(this.value, input.getAttribute('mask'));
-  })
-})
 
 function createMask(string, type){
   const number = string.replace(/\D/g,'')
