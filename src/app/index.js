@@ -49,6 +49,11 @@ function canSubmit() {
     (email.value && checkInput(email) || 
     (telefone.value && checkInput(telefone) && cpf.value && checkInput(cpf)))
   }
+  if (valid) {
+    btnSubmit.removeAttribute('title')
+  } else {
+    btnSubmit.setAttribute('title', 'Preencha os campos obrigatórios')
+  }
   return valid;
 }
 
@@ -60,7 +65,11 @@ form.addEventListener('submit', function (e) {
   let survey = {}
   allInputs.forEach(elem => {
     elem.disabled = true
-    survey[elem.name] = elem.value
+    if (elem.getAttribute('type') !== 'radio' || 
+      elem.getAttribute('type') === 'radio' && 
+      elem.checked) {
+        survey[elem.name] = elem.value
+    }
   })
 
   SurveyService.create(survey).then(result => {
