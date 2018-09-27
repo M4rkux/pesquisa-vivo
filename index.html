@@ -2,17 +2,48 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Pesquisa VIVO Empresas: Serviços Digitais</title>
-<link href="/pesquisa-vivo/main.css" rel="stylesheet"></head>
+<link href="/main.css" rel="stylesheet"></head>
 
 <section>
     <header>
-        <img class="logo" src="/pesquisa-vivo/imgs/vivo.png" />
+        <img class="logo" src="/imgs/vivo.png" />
     </header>
     
     <form>
+        
         <h4 class="subtitle"> Caro cliente, queremos avaliar sua satisfação com seu GERENTE DE NEGÓCIOS.</h4>
+
+        <article>
+        
+            <div class="row">
+                <label for="canal">Por qual canal você recebeu essa pesquisa?</label>
+                <select id="canal">
+                    <option value="">Selecione</option>
+                    <option value="sms">SMS</option>
+                    <option value="email">E-mail</option>
+                </select>
+            </div>
+    
+            <div class="row">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" />
+            </div>
+    
+            <div class="row flex">
+                <small>Ou</small>
+                <div class="half-col">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" mask="telefone" maxlength="15" pattern="\((\d{2})\)(\d{4,5})-(\d{4})" />
+                </div>
+                <div class="half-col">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" mask="cpf" maxlength="14" pattern="(\d{3}).(\d{3}).(\d{3})-(\d{2})" />
+                </div>
+            </div>
+        </article>
+        
         <div class="row">
-            <label>Avalie de 1 a 10 o atendimento prestado. <span class="required">*</span></label>
+            <label>1. Avalie de 1 a 10 o atendimento prestado. <span class="required">*</span></label>
             <div class="notas">
                 <label class="mr-15"><input required type="radio" name="nota_atendimento" value="1" />1</label>
                 <label class="mr-15"><input required type="radio" name="nota_atendimento" value="2" />2</label>
@@ -40,31 +71,6 @@
             <input type="text" id="comentario" name="comentario" />
         </div>
 
-        <article>
-            
-            <div class="row">
-                <h5 class="contact-title">Dados de contato <span class="required">*</span></h5>
-            </div>
-    
-            <div class="row">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" />
-            </div>
-    
-            <div class="row flex">
-                <small>Ou</small>
-                <div class="half-col">
-                    <label for="telefone">Telefone:</label>
-                    <input type="text" id="telefone" name="telefone" mask="telefone" maxlength="15" pattern="\((\d{2})\)(\d{4,5})-(\d{4})" />
-                </div>
-                <div class="half-col">
-                    <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" mask="cpf" maxlength="14" pattern="(\d{3}).(\d{3}).(\d{3})-(\d{2})" />
-                </div>
-            </div>
-        </article>
-
-
         <div class="row">
             <button type="submit" class="btn-submit" disabled>
                 <span class="lbl-criar-conta">Enviar formulário</span>
@@ -74,4 +80,4 @@
             </button>
         </div>
     </form>
-</section><script type="text/javascript" src="/pesquisa-vivo/bundle.js"></script>
+</section><script type="text/javascript" src="/bundle.js"></script>
