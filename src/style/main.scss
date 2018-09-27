@@ -84,6 +84,9 @@ body {
             border-color: $requirement-color-error;
             outline-color: $requirement-color-error;
         }
+        &[disabled] {
+            background-color: #e4e4e4;
+        }
     }
 
     textarea {
@@ -275,6 +278,17 @@ body {
             select, input[type=text], input[type=email] {
                 height: 36px;
             }
+        }
+    }
+
+    .contact {
+        display: flex;
+        align-items: baseline;
+        > div:first-child {
+            width: 75px;
+        }
+        > div:last-child {
+            width: calc(100% - 75px);
         }
     }
 }

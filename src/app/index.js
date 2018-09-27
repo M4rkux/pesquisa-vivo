@@ -4,11 +4,13 @@ import { SurveyService } from './survey.service'
 const allInputs = Array.from(document.querySelectorAll('input'))
 const btnSubmit = document.querySelector('.btn-submit')
 
-const email = document.querySelector('#email');
-const telefone = document.querySelector('#telefone');
-const cpf = document.querySelector('#cpf');
+const email = document.querySelector('#email')
+const telefone = document.querySelector('#telefone')
+const cpf = document.querySelector('#cpf')
 
 const form = document.querySelector('form')
+
+const contactsType = Array.from(document.querySelectorAll('[name=canal]'))
 
 const confirmation = `
     <img class="checked" src="/imgs/checked.svg" />
@@ -28,6 +30,15 @@ allInputs.forEach(elem => {
     }
     checkInput(this, true)
     btnSubmit.disabled = !canSubmit()
+  })
+})
+
+contactsType.forEach((input) => {
+  input.addEventListener('change', function () {
+    if (this.checked) {
+      email.disabled = this.value !== 'email';
+      telefone.disabled = this.value !== 'sms';
+    }
   })
 })
 
