@@ -78,7 +78,7 @@ body {
     text-align: center;
     color: #FFFFFF; }
     body .btn-submit:disabled {
-      opacity: 0.75; }
+      opacity: 0.5; }
     body .btn-submit:focus {
       outline-color: #6c4999;
       outline-offset: 1px;
