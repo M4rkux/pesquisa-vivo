@@ -58,7 +58,7 @@ body {
         margin-bottom: 8px;
     }
 
-    input[type=text], input[type=email] {
+    select, input[type=text], input[type=email] {
         background: #FFFFFF;
         border: 1px solid #B6B9D0;
         box-sizing: border-box;
@@ -66,7 +66,6 @@ body {
         width: 100%;
         height: 44px;
         margin-top: 8px;
-        padding: 15px 0px;
 
         font-family: Soleil, 'Roboto';
         line-height: 26px;
@@ -206,60 +205,67 @@ body {
             color: $text-color;
         }
     }
-}
 
-ul {
-    list-style: none;
-    padding-left: 0px;
-}
-
-.required {
-    color: red;
-}
-
-.mr-15 {
-    margin-right: 15px;
-}
-
-.notas {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.contact-title {
-    font-weight: 500;
-    color: #312F4F;
-    font-size: large;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-
-    small {
-        width: 100%;
-        margin-bottom: 10px;
-        font-weight: 600;
+    ul {
+        list-style: none;
+        padding-left: 0px;
+    }
+    
+    .required {
+        color: red;
+    }
+    
+    .mr-15 {
+        margin-right: 15px;
+    }
+    
+    .notas {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .contact-title {
+        font-weight: 500;
         color: #312F4F;
+        font-size: large;
+        margin-bottom: 0px;
+        margin-top: 0px;
     }
-}
-
-.half-col {
-    width: calc(50% - 5px);
-    &:nth-child(2n) {
-        margin-right: 5px;
+    
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+    
+        small {
+            width: 100%;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #312F4F;
+        }
     }
-    &:nth-child(2n+1) {
-        margin-left: 5px;
+    
+    .half-col {
+        width: calc(50% - 5px);
+        &:nth-child(2n) {
+            margin-right: 5px;
+        }
+        &:nth-child(2n+1) {
+            margin-left: 5px;
+        }
     }
-}
-
-article {
-    margin-top: 40px;
-    .row {
-        margin-top: 12px;
+    
+    article {
+        margin-bottom: 40px;
+        label {
+            line-height: initial;
+            font-size: 0.85em;
+        }
+        .row {
+            margin-top: 12px;
+            select, input[type=text], input[type=email] {
+                height: 36px;
+            }
+        }
     }
 }
 
@@ -267,17 +273,20 @@ article {
     body {
         padding-top: initial;
         section {
+            .subtitle {
+                font-size: 18px;
+            }
             max-width: 100%;
             padding: 15px;
         }
     }
     .half-col {
-        width: 100%;
+        width: 100% !important;
         &:nth-child(2n) {
-            margin-right: initial;
+            margin-right: initial !important;
         }
         &:nth-child(2n+1) {
-            margin-left: initial;
+            margin-left: initial !important;
             margin-top: 10px;
         }
     }

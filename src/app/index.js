@@ -3,7 +3,6 @@ import { SurveyService } from './survey.service'
 
 const allInputs = Array.from(document.querySelectorAll('input'))
 const btnSubmit = document.querySelector('.btn-submit')
-const inputMasks = Array.from(document.querySelectorAll("input[mask]"))
 
 const email = document.querySelector('#email');
 const telefone = document.querySelector('#telefone');
