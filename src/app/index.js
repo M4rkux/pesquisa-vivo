@@ -1,7 +1,7 @@
 import '../style/main.scss'
 import { SurveyService } from './survey.service'
 
-const allInputs = Array.from(document.querySelectorAll('input'))
+const allInputs = Array.from(document.querySelectorAll('input,textarea'))
 const btnSubmit = document.querySelector('.btn-submit')
 
 const email = document.querySelector('#email')
