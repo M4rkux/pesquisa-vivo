@@ -17,12 +17,12 @@
         <article>
         
             <div class="row">
-                <label for="canal">Por qual canal você recebeu essa pesquisa?</label>
+                <label>Por qual canal você recebeu essa pesquisa? <span class="required">*</span></label>
             </div>
 
             <div class="row contact">
                 <div>
-                    <label><input required type="radio" name="canal" value="sms" />SMS</label>
+                    <label><input required type="radio" id="sms" name="canal" value="sms" />SMS</label>
                 </div>
                 <div>
                     <input type="text" id="telefone" name="telefone" mask="telefone" maxlength="15" 
@@ -31,7 +31,7 @@
             </div>
             <div class="row contact">
                 <div>
-                    <label><input required type="radio" name="canal" value="email" />E-mail</label>
+                    <label><input required type="radio" id="email" name="canal" value="email" />E-mail</label>
                 </div>
                 <div>
                     <input type="email" id="email" name="email" disabled />
@@ -39,9 +39,9 @@
             </div>
 
             <div class="row contact">
-                <div><label for="cpf">CPF:</label></div>
+                <div><label for="cpf">CPF: <span class="required">*</span></label></div>
                 <div>
-                    <input type="text" id="cpf" name="cpf" mask="cpf" maxlength="14" pattern="(\d{3}).(\d{3}).(\d{3})-(\d{2})" />
+                    <input required type="text" id="cpf" name="cpf" mask="cpf" maxlength="14" pattern="(\d{3}).(\d{3}).(\d{3})-(\d{2})" />
                 </div>
             </div>
         </article>
@@ -76,7 +76,7 @@
         </div>
 
         <div class="row">
-            <button type="submit" class="btn-submit" disabled>
+            <button type="submit" class="btn-submit" title="Preencha os campos obrigatórios" disabled>
                 <span class="lbl-criar-conta">Enviar formulário</span>
                 <span class="ellipse e1"></span>
                 <span class="ellipse e2"></span>
