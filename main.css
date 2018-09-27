@@ -52,6 +52,8 @@ body {
     body select.error, body input[type=text].error, body input[type=email].error, body textarea.error {
       border-color: #F79682;
       outline-color: #F79682; }
+    body select[disabled], body input[type=text][disabled], body input[type=email][disabled], body textarea[disabled] {
+      background-color: #e4e4e4; }
   body textarea {
     height: 100px;
     resize: vertical; }
@@ -178,6 +180,13 @@ body {
       margin-top: 12px; }
       body article .row select, body article .row input[type=text], body article .row input[type=email] {
         height: 36px; }
+  body .contact {
+    display: flex;
+    align-items: baseline; }
+    body .contact > div:first-child {
+      width: 75px; }
+    body .contact > div:last-child {
+      width: calc(100% - 75px); }
 
 @media screen and (max-width: 540px) {
   body {
