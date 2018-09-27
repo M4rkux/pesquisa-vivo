@@ -58,7 +58,9 @@ body {
         margin-bottom: 8px;
     }
 
-    select, input[type=text], input[type=email] {
+    select, input[type=text], input[type=email], textarea {
+        box-sizing: border-box;
+
         background: #FFFFFF;
         border: 1px solid #B6B9D0;
         box-sizing: border-box;
@@ -84,6 +86,11 @@ body {
         }
     }
 
+    textarea {
+        height: 100px;
+        resize: vertical;
+    }
+
     .password-strength {
         width: 32%;
         height: 8px;
@@ -105,7 +112,7 @@ body {
 
     .btn-submit {
         height: 52px;
-        background-color: $button-success-color;
+        background-color: #6c4999;
         font-weight: 600;
         width: 100%;
         border: none;
@@ -113,20 +120,23 @@ body {
         font-size: 16px;
         text-align: center;
         color: #FFFFFF;
+        &:disabled {
+            opacity: 0.75;
+        }
 
         &:focus {
-            outline-color: $button-success-color;
+            outline-color: #6c4999;
             outline-offset: 1px;
             outline-width: 1px;
             outline-style: solid;
         }
 
         &:hover:not([disabled]) {
-            background-color: $button-success-color-hover;
+            background-color: #6b2d6d;
             cursor: pointer;
         }
         &:active:not([disabled]) {
-            background-color: $button-success-color-active;
+            background-color: #472f65;
         }
     }
 
